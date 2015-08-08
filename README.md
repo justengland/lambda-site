@@ -1,6 +1,6 @@
 # lambda-site
 
-Combine AWS Lambda and S3 to make a powerfull, fun to develope javascript application.
+Combine AWS Lambda and S3 to make a powerfull, fun to develope javascript application. Go
 
 [![Travis build status](http://img.shields.io/travis/justengland/lambda-site.svg?style=flat)](https://travis-ci.org/justengland/lambda-site)
 [![Code Climate](https://codeclimate.com/github/justengland/lambda-site/badges/gpa.svg)](https://codeclimate.com/github/justengland/lambda-site)
