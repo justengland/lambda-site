@@ -1,0 +1,65 @@
+{
+  "nextFreeModuleId": 10,
+  "modules": {
+    "byIdentifier": {
+      "multi hello-world": 0,
+      "node_modules/webpack/hot/signal.js": 1,
+      "node_modules/webpack/hot/log-apply-result.js": 2,
+      "node_modules/babel-loader/index.js!/Users/jengland/GitHub/lambda-site/server/hello-world.js": 3,
+      "multi lambda-server": 0,
+      "node_modules/babel-loader/index.js!/Users/jengland/GitHub/lambda-site/server/lambda-server/main.js": 4,
+      "node_modules/babel-loader/index.js!/Users/jengland/GitHub/lambda-site/server/lambda-server/app.js": 5,
+      "external \"path\"": 6,
+      "external \"http\"": 7,
+      "external \"express\"": 8,
+      "node_modules/babel-loader/index.js!/Users/jengland/GitHub/lambda-site/server/lambda-server/lambdaMiddleware.js": 9
+    }
+  },
+  "nextFreeChunkId": 2,
+  "chunks": {
+    "byName": {
+      "hello-world": 0,
+      "lambda-server": 1
+    },
+    "byBlocks": {}
+  },
+  "prepreHash": "x",
+  "preHash": "2c69b0f91cb349b36fd8",
+  "hash": "f5232c8d9f2d396dad4e",
+  "moduleHashs": {
+    "multi hello-world": "635152c29354be081c2359ed71f412a9",
+    "multi lambda-server": "47f838788c7a4edf61a680ebc4c1c3f2",
+    "/Users/jengland/GitHub/lambda-site/node_modules/webpack/hot/signal.js": "38b3947ab3015e20d397ca461e8eb705",
+    "/Users/jengland/GitHub/lambda-site/node_modules/webpack/hot/log-apply-result.js": "7cd41a95be6ba16cefccb5d39036449c",
+    "/Users/jengland/GitHub/lambda-site/node_modules/babel-loader/index.js!/Users/jengland/GitHub/lambda-site/server/hello-world.js": "de0c79de5d85e706ca62bbe61a982704",
+    "/Users/jengland/GitHub/lambda-site/node_modules/babel-loader/index.js!/Users/jengland/GitHub/lambda-site/server/lambda-server/main.js": "f4b43d23d3565a497c1c6f024df56111",
+    "/Users/jengland/GitHub/lambda-site/node_modules/babel-loader/index.js!/Users/jengland/GitHub/lambda-site/server/lambda-server/app.js": "1f1081b4eb3332e90debded51cb9dfcb",
+    "external \"path\"": "1679091c5a880faf6fb5e6087eb1b2dc",
+    "external \"http\"": "8f14e45fceea167a5a36dedd4bea2543",
+    "external \"express\"": "c9f0f895fb98ab9159f51fd0297e236d",
+    "/Users/jengland/GitHub/lambda-site/node_modules/babel-loader/index.js!/Users/jengland/GitHub/lambda-site/server/lambda-server/lambdaMiddleware.js": "1cf598bfd7e510bfa35ac3ab3af0aa02"
+  },
+  "chunkHashs": {
+    "0": "04f37ad831ceecc90eb614ec44688d8b",
+    "1": "192b9b63dded71a8425133bbe8e902a1"
+  },
+  "chunkModuleIds": {
+    "0": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "1": [
+      0,
+      1,
+      2,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  }
+}

@@ -1,23 +1,47 @@
 var path = require('path');
 var webpack = require('webpack');
+var fs = require('fs');
+
+var nodeModules = {};
+fs.readdirSync('node_modules')
+  .filter(function(x) {
+    return ['.bin'].indexOf(x) === -1;
+  })
+  .forEach(function(mod) {
+    nodeModules[mod] = 'commonjs ' + mod;
+  });
+
 module.exports = {
   entry: {
-    app: './www/assets/js/app.jsx',
-    devServer: 'webpack/hot/dev-server'
+    'lambda-server': [
+      'webpack/hot/signal.js',
+      './server/lambda-server/main',
+    ],
+    'hello-world': [
+      'webpack/hot/signal.js',
+      './server/hello-world',
+    ],
   },
+  target: 'node',
   output: {
-    filename: '[name]_bundle.js', // Will output App_wp_bundle.js
-    path: __dirname + '/assets/bundles',
-    publicPath: 'http://localhost:8080/assets' // Required for webpack-dev-server
+    path: path.join(__dirname, '/server/build'),
+    filename: '[name].js'
   },
-  inline: true,
-  watch: true,
   module: {
     loaders: [
-      { test: /\.jsx?$/, loader: 'babel-loader?stage=2', exclude: /node_modules/ },
-      { test: /\.css$/, loader: 'style!css' },
-      { test: /\.less$/, loader: 'style!css!less?strictMath&noIeCompat' }
+      { test: /\.jsx?$/, exclude: /node_modules/, loaders: ['babel'] },
     ]
   },
-  plugins: [new webpack.HotModuleReplacementPlugin()]
-};
+  node: {
+    __dirname: true,
+    __filename: true
+  },
+  externals: nodeModules,
+  recordsPath: path.join(__dirname, 'server/build/_records'),
+  plugins: [
+    new webpack.IgnorePlugin(/\.(css|less)$/),
+    new webpack.BannerPlugin('require("source-map-support").install();',
+      { raw: true, entryOnly: false }),
+    new webpack.HotModuleReplacementPlugin({ quiet: true })
+  ]
+}
