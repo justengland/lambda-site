@@ -25,7 +25,7 @@ module.exports = {
   target: 'node',
   output: {
     path: path.join(__dirname, '/server/build'),
-    filename: '[name].js'
+    filename: '[name].lambda.js'
   },
   module: {
     loaders: [

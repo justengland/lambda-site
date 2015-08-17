@@ -78,7 +78,7 @@ gulp.task('watch', ['client-watch', 'server-watch']);
 
 gulp.task('clean', function() {
   return gulp.src('**/build/*', { read: false }) // much faster
-    .pipe(ignore('node_modules/**'))
+    // .pipe(ignore('node_modules/**'))
     .pipe(rimraf());
 });
 
@@ -87,7 +87,7 @@ gulp.task('default', ['server-watch', 'client-watch'], function() {
     execMap: {
       js: 'node'
     },
-    script: path.join(__dirname, 'server/build/lambda-server'),
+    script: path.join(__dirname, 'server/build/lambda-server.lambda.js'),
     //ignore: ['*'],
     //watch: ['foo/'],
     //ext: 'noop'

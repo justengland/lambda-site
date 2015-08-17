@@ -1,3 +1,4 @@
+# Created by .ignore support plugin (hsz.mobi)
 # Logs
 logs
 *.log
@@ -16,20 +17,19 @@ coverage
 # Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
 .grunt
 
-# Compiled binary addons (http://nodejs.org/api/addons.html)
-build/Release
-
-# Dependency directory
-# Commenting this out is preferred by some people, see
-# https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git-
-node_modules/
-dist/
-bower_components
-coverage
-tmp
-
-# Users Environment Variables
+# node-waf configuration
 .lock-wscript
 
-# Webstorm
+# Compiled binary addons (http://nodejs.org/api/addons.html)
+server/build/
+client/build/
+
+# Dependency directory
+# https://docs.npmjs.com/misc/faq#should-i-check-my-node-modules-folder-into-git
+node_modules
+
+#Webstorm
 .idea
+
+# My convention for little script helpers, when I have to hunt around.
+*.scratch.js
